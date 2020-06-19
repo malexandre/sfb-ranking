@@ -1,0 +1,34 @@
+version: '3'
+services:
+    postgres:
+        image: postgres:12.3-alpine
+        ports:
+            - 5531:5431
+            - 5532:5432
+        env_file:
+          - .env
+        environment:
+            POSTGRES_USER: sfb-ranking-user
+            POSTGRES_DB: sfb-ranking
+        volumes:
+            - ./postgres-data:/var/lib/postgresql/data:cached
+
+    node:
+        build: .
+        volumes:
+          - ./package.json:/usr/app/package.json
+          - ./package-lock.json:/usr/app/package-lock.json
+          - ./src:/usr/app/src
+          - ./public:/usr/app/public
+          - ./node_modules:/usr/app/node_modules
+        ports:
+          - "3000:3000"
+        stdin_open: true
+        env_file:
+          - .env
+        command: npm start
+        depends_on:
+          - postgres
+        environment:
+          DATABASE_URL: postgres://sfb-ranking-user@postgres/sfb-ranking
+
