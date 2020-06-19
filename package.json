@@ -30,5 +30,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-malexandre": "^1.0.2",
+    "prettier-eslint": "^11.0.0"
   }
 }

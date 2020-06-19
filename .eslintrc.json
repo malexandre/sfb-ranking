@@ -1,0 +1,17 @@
+{
+  "extends": ["malexandre"],
+  "rules": {
+    "indent": ["warn", 2, {
+      "SwitchCase": 1,
+      "FunctionDeclaration": {
+        "parameters": 1
+      },
+      "FunctionExpression": {
+          "parameters": 1
+      },
+      "CallExpression": {
+        "arguments": 1
+      }
+    }]
+  }
+}
