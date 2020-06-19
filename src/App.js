@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './logo.svg'
+import 'bootstrap/dist/css/bootstrap.css'
 import './App.css'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        <a className="btn btn-primary" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </header>
