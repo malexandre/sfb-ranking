@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom'
 import Ladder from './ladder/Ladder'
 import TournamentList from './tournament/TournamentList'
 import TournamentDetail from './tournament/TournamentDetail'
@@ -9,7 +9,7 @@ import LadderDetail from './ladder/LadderDetail'
 export default function App() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link className="navbar-brand" to="/">
           Classement SFB
         </Link>
@@ -24,12 +24,12 @@ export default function App() {
         </button>
         <div className="collapse navbar-collapse" id="main-navbar">
           <div className="navbar-nav">
-            <Link className="nav-item nav-link active" to="/ladder">
-              Ladder <span className="sr-only">(current)</span>
-            </Link>
-            <Link className="nav-item nav-link" to="/tournament">
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/ladder">
+              Ladder
+            </NavLink>
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/tournament">
               Tournament
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>
