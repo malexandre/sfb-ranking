@@ -13,7 +13,7 @@ services:
         volumes:
             - ./postgres-data:/var/lib/postgresql/data:cached
 
-    node:
+    client:
         build: .
         volumes:
           - ./package.json:/usr/app/package.json
@@ -26,7 +26,23 @@ services:
         stdin_open: true
         env_file:
           - .env
-        command: npm start
+        command: npm run client
+
+    server:
+        build: .
+        volumes:
+          - ./package.json:/usr/app/package.json
+          - ./package-lock.json:/usr/app/package-lock.json
+          - ./src:/usr/app/src
+          - ./server:/usr/app/server
+          - ./public:/usr/app/public
+          - ./node_modules:/usr/app/node_modules
+        ports:
+          - "8080:8080"
+        stdin_open: true
+        env_file:
+          - .env
+        command: npm run server
         depends_on:
           - postgres
         environment:
