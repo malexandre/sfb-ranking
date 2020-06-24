@@ -50,13 +50,18 @@ const data = {
   ],
 }
 
-export default function TournamentDetail({ match }) {
+export default function TournamentDetail({ match, history }) {
   if (!match.isExact || !match.params || !match.params.uuid) {
     return <div>{ 'Ce tournoi n\'a pas été trouvé.' }</div>
   }
 
   return (
     <div>
+      <div className="text-center mb-4">
+        <button className="btn btn-secondary" onClick={ () => history.goBack() } role="button">
+          Retour
+        </button>
+      </div>
       <div className="card text-center">
         <div className="card-body">
           <h3 className="card-title">{ data.name }</h3>
@@ -109,7 +114,10 @@ TournamentDetail.propTypes = {
   match: PropTypes.shape({
     isExact: PropTypes.bool,
     params: PropTypes.shape({
-      uuid: PropTypes.string
-    })
-  })
+      uuid: PropTypes.string,
+    }),
+  }),
+  history: PropTypes.shape({
+    goBack: PropTypes.func,
+  }),
 }
