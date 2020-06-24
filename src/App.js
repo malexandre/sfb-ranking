@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Ladder from './ladder/Ladder'
 import TournamentList from './tournament/TournamentList'
 import TournamentDetail from './tournament/TournamentDetail'
+import LadderDetail from './ladder/LadderDetail'
 
 export default function App() {
   return (
@@ -34,14 +35,15 @@ export default function App() {
       </nav>
 
       <div className="container mt-4">
-      <Switch>
+        <Switch>
           <Route path="/tournament/:uuid" component={ TournamentDetail } />
           <Route path="/tournament" component={ TournamentList } />
           <Route path="/test" component={ TournamentDetail } />
+          <Route path="/ladder/:uuid" component={ LadderDetail } />
           <Route path="/ladder" component={ Ladder } />
           <Route path="/" component={ Ladder } />
         </Switch>
-          </div>
+      </div>
     </Router>
   )
 }

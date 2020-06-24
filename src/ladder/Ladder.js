@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { EyeFill } from 'react-bootstrap-icons'
 
 const data = [
   {
@@ -38,6 +40,7 @@ export default function Ladder() {
             <th scope="col">#</th>
             <th scope="col">Pseudo</th>
             <th scope="col">Points</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -47,6 +50,11 @@ export default function Ladder() {
                 <th scope="row">{ row.rank }</th>
                 <td>{ row.name }</td>
                 <td>{ row.points }</td>
+                <td>
+                  <Link to={ `/ladder/${'uuid'}` }>
+                    <EyeFill />
+                  </Link>
+                </td>
               </tr>
             )
           }) }
