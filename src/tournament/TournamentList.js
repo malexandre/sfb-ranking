@@ -1,6 +1,7 @@
 import React from 'react'
 import { DateTime } from 'luxon'
-import { Square, CheckSquare } from 'react-bootstrap-icons'
+import { Square, CheckSquare, EyeFill } from 'react-bootstrap-icons'
+import { Link } from 'react-router-dom'
 
 const data = [
   {
@@ -42,6 +43,7 @@ export default function TournamentList() {
             <th scope="col">Compéttitif</th>
             <th scope="col">Participants</th>
             <th scope="col">Gagnant</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -50,10 +52,15 @@ export default function TournamentList() {
               <tr key={ index }>
                 <th scope="row">{ DateTime.fromMillis(row.date).toLocaleString(DateTime.DATE_SHORT) }</th>
                 <td>{ row.name }</td>
-                <td>{ row.major ? (<CheckSquare />) : (<Square />)  }</td>
-                <td>{ row.competitive ? (<CheckSquare />) : (<Square />) }</td>
+                <td>{ row.major ? <CheckSquare /> : <Square /> }</td>
+                <td>{ row.competitive ? <CheckSquare /> : <Square /> }</td>
                 <td>{ row.participants }</td>
                 <td>{ row.winner }</td>
+                <td>
+                  <Link to={ `/tournament/${'uuid'}` }>
+                    <EyeFill />
+                  </Link>
+                </td>
               </tr>
             )
           }) }
