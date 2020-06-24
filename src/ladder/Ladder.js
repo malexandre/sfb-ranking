@@ -31,7 +31,7 @@ const data = [
 export default function Ladder() {
   return (
     <div>
-      <h2>Classement SFB Francophone</h2>
+      <h2 className="text-center">Classement SFB Francophone</h2>
       <table className="table table-striped">
         <thead className="bg-primary text-light">
           <tr>

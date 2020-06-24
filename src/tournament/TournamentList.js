@@ -32,7 +32,7 @@ const data = [
 export default function TournamentList() {
   return (
     <div>
-      <h2>Historique des tournois</h2>
+      <h2 className="text-center">Historique des tournois</h2>
       <table className="table table-striped">
         <thead className="bg-primary text-light">
           <tr>
