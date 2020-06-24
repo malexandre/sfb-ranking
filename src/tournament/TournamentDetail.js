@@ -58,7 +58,7 @@ export default function TournamentDetail({ match, history }) {
   return (
     <div>
       <div className="text-center mb-4">
-        <button className="btn btn-secondary" onClick={ () => history.goBack() } role="button">
+        <button className="btn btn-secondary" onClick={ () => history.goBack() }>
           Retour
         </button>
       </div>
