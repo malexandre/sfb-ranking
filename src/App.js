@@ -6,6 +6,7 @@ import TournamentList from './tournament/TournamentList'
 import TournamentDetail from './tournament/TournamentDetail'
 import LadderDetail from './ladder/LadderDetail'
 import Admin from './Admin'
+import Rulebook from './rulebook/Rulebook'
 
 export default function App() {
   return (
@@ -45,7 +46,7 @@ export default function App() {
           <Route path="/participant/:uuid" component={ LadderDetail } />
           <Route path="/classement" component={ Ladder } />
           <Route path="/admin" component={ Admin } />
-          <Route path="/" component={ Ladder } />
+          <Route path="/" component={ Rulebook } />
         </Switch>
       </div>
     </Router>
