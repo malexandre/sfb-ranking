@@ -29,7 +29,7 @@ export default function App() {
             <NavLink className="nav-item nav-link" activeClassName="active" to="/">
               Règles du tournoi
             </NavLink>
-            <NavLink className="nav-item nav-link" activeClassName="active" to="/ladder">
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/classement">
               Classement
             </NavLink>
             <NavLink className="nav-item nav-link" activeClassName="active" to="/tournois">
