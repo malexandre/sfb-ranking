@@ -85,7 +85,6 @@ app.get('/api/ladder', async(_, res) => {
 })
 app.get('/api/user/:name', async(req, res) => {
   try {
-    console.log(req)
     const json = await userController.getUserDetail(req.params.name)
     res.status(200).json(json)
   }
@@ -96,7 +95,6 @@ app.get('/api/user/:name', async(req, res) => {
 })
 
 app.get('/', function(req, res) {
-  console.log(path.join(__dirname, '..', 'public', 'index.html'))
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 

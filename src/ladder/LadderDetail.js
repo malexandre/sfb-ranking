@@ -60,8 +60,6 @@ export default class LadderDetail extends Component {
       return <div></div>
     }
 
-    console.log(this.state.data)
-
     return (
       <div>
         <div className="text-center mb-4">
