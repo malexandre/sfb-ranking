@@ -106,6 +106,7 @@ exports.getUserDetail = async(name) => {
       majors += tournament.major ? 1 : 0
 
       return {
+        id: tournament.id,
         name: tournament.name,
         major: tournament.major,
         competitive: tournament.competitive,

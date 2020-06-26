@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Square, CheckSquare } from 'react-bootstrap-icons'
+import { Square, CheckSquare, EyeFill } from 'react-bootstrap-icons'
 import { DateTime } from 'luxon'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 export default class TournamentDetail extends Component {
   constructor(props) {
@@ -91,6 +92,7 @@ export default class TournamentDetail extends Component {
                 <th scope="col">Première moitié</th>
                 <th scope="col">Points classement</th>
                 <th scope="col">Points total</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
@@ -104,6 +106,11 @@ export default class TournamentDetail extends Component {
                     <td>{ row.firstHalf ? <CheckSquare /> : <Square /> }</td>
                     <td>{ row.ladderPoints }</td>
                     <td>{ row.totalPoints }</td>
+                    <td>
+                      <Link to={ `/participant/${row.name}` }>
+                        <EyeFill />
+                      </Link>
+                    </td>
                   </tr>
                 )
               }) }

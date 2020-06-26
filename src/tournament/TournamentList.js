@@ -70,7 +70,7 @@ export default class LadTournamentListder extends Component {
                   <td>{ row.participants }</td>
                   <td>{ row.winner }</td>
                   <td>
-                    <Link to={ `/tournament/${row.id}` }>
+                    <Link to={ `/tournoi/${row.id}` }>
                       <EyeFill />
                     </Link>
                   </td>

@@ -109,7 +109,7 @@ export default class LadderDetail extends Component {
                     <td>{ row.finalPosition }</td>
                     <td>{ row.finalPoints }</td>
                     <td>
-                      <Link to={ `/tournament/${'uuid'}` }>
+                      <Link to={ `/tournoi/${row.id}` }>
                         <EyeFill />
                       </Link>
                     </td>

@@ -70,7 +70,7 @@ export default class Ladder extends Component {
                   <td>{ row.name }</td>
                   <td>{ row.points }</td>
                   <td>
-                    <Link to={ `/ladder/${row.name}` }>
+                    <Link to={ `/participant/${row.name}` }>
                       <EyeFill />
                     </Link>
                   </td>

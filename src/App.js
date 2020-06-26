@@ -25,10 +25,13 @@ export default function App() {
         </button>
         <div className="collapse navbar-collapse" id="main-navbar">
           <div className="navbar-nav">
-            <NavLink className="nav-item nav-link" activeClassName="active" to="/ladder">
-              Ladder
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/">
+              Règles du tournoi
             </NavLink>
-            <NavLink className="nav-item nav-link" activeClassName="active" to="/tournament">
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/ladder">
+              Classement
+            </NavLink>
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/tournois">
               Tournament
             </NavLink>
           </div>
@@ -37,11 +40,10 @@ export default function App() {
 
       <div className="container mt-4">
         <Switch>
-          <Route path="/tournament/:uuid" component={ TournamentDetail } />
-          <Route path="/tournament" component={ TournamentList } />
-          <Route path="/test" component={ TournamentDetail } />
-          <Route path="/ladder/:uuid" component={ LadderDetail } />
-          <Route path="/ladder" component={ Ladder } />
+          <Route path="/tournoi/:uuid" component={ TournamentDetail } />
+          <Route path="/tournois" component={ TournamentList } />
+          <Route path="/participant/:uuid" component={ LadderDetail } />
+          <Route path="/classement" component={ Ladder } />
           <Route path="/admin" component={ Admin } />
           <Route path="/" component={ Ladder } />
         </Switch>
