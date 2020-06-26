@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "luxon": "^1.24.1",
     "prop-types": "^15.7.2",
@@ -10,7 +12,9 @@
     "react-bootstrap-icons": "^1.0.3-alpha4",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "sequelize": "^6.2.0",
+    "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
     "start": "docker-compose up",
@@ -18,7 +22,10 @@
     "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "db:migration:generate": "sequelize-cli migration:generate --name",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:undo": "sequelize-cli db:migrate:undo"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,7 +46,9 @@
     "eslint-config-malexandre": "^1.0.2",
     "nodemon": "^2.0.4",
     "npm-run-all": "^4.1.5",
-    "prettier-eslint": "^11.0.0"
+    "pg": "^8.2.1",
+    "prettier-eslint": "^11.0.0",
+    "sequelize-cli": "^6.0.0"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://server:8080"
 }
