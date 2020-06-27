@@ -24,7 +24,7 @@ module.exports = {
     username: 'sfb-ranking-user',
     password: process.env.POSTGRES_PASSWORD,
     database: 'sfb-ranking',
-    host: 'postgres',
+    host: 'sfb-database',
     dialect: 'postgres',
     port: 5432,
   },
