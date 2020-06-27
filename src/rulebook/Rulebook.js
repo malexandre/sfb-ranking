@@ -9,7 +9,7 @@ export default function Rulebook() {
 
       <h2>À quoi sert ce site ?</h2>
       <p>
-        Cette page contient les règles de la ligue et les liens importants. Sur les autres pages, l&apos;hitorique de
+        Cette page contient les règles de la ligue et les liens importants. Sur les autres pages, l&apos;historique de
         toutes les saisons et compétitions jouées est consultable, ainsi que le classement SFB (inspiré du classement
         ATP, pour aider à la répartition des joueurs dans les phases de poule).
       </p>
@@ -34,7 +34,7 @@ export default function Rulebook() {
       <p>
         Le tirage de la phase de groupe est pondéré par le classement actuel de chaque participant. Le nombre de groupe
         sera dépendant du nombre d&apos;inscrits, tout comme le format <b>toutes rondes</b> ou{ ' ' }
-        <b>format rondes suisse</b>.
+        <b>format rondes suisses</b>.
       </p>
       <p>
         Une victoire en phase de groupe rapporte 3 points. Les égalités sont départagées par la différence de points,
@@ -56,18 +56,19 @@ export default function Rulebook() {
       </p>
       <p>
         À la fin de chaque saison, des discussions seront entamées avec la communauté pour décider si des changements
-        sont à apporter pour la saison suivante, que ce soit en terme d&apos;organisation ou de règls durant les matchs.
+        sont à apporter pour la saison suivante, que ce soit en terme d&apos;organisation ou de règles durant les
+        matchs.
       </p>
       <p>
         En plus des saisons, des tournois ponctuels pourront être organisés par la communauté, par exemple pour occuper
-        ceux qui ne sont pas qualifiés pour la phase finale pendant qu&aspos;elle se déroule, ou pour tester
-        d&aspos;autres formats.
+        ceux qui ne sont pas qualifiés pour la phase finale pendant qu&apos;elle se déroule, ou pour tester
+        d&apos;autres formats.
       </p>
 
       <h2>Structure des matchs</h2>
       <p>
         Malheureusement, le jeu n&apos;est actuellement pas entièrement équilibré. Ce n&apos;est pas très important sur
-        les parties amicales, mais dans un format compétitif, le ppremier joueur serait un poil trop avantangé si on
+        les parties amicales, mais dans un format compétitif, le premier joueur serait un poil trop avantangé si on
         suivait parfaitement les règles officielles. Pour rétablir l&apos;équilibre, les matchs de la ligue suivront les
         règles officielles à l&apos;excepion de ces deux changements :
       </p>
@@ -84,8 +85,8 @@ export default function Rulebook() {
         <dt className="col-sm-3">Mise en place des objectifs</dt>
         <dd className="col-sm-9">
           <p>
-            Après avoir révéler les deux objectifs lors de la mise en place, le joueur 2 peut décider de mulligan tout
-            ou partie des objectifs révélés.
+            Après avoir révélé les deux objectifs lors de la mise en place, le joueur 2 peut décider de mulligan tout ou
+            partie des objectifs révélés.
           </p>
         </dd>
       </dl>
@@ -119,8 +120,12 @@ export default function Rulebook() {
         <thead className="bg-primary text-light">
           <tr>
             <th scope="col">Position finale</th>
-            <th scope="col" colSpan="2">Tournoi majeur</th>
-            <th scope="col" colSpan="2">Tournoi mineur</th>
+            <th scope="col" colSpan="2">
+              Tournoi majeur
+            </th>
+            <th scope="col" colSpan="2">
+              Tournoi mineur
+            </th>
           </tr>
           <tr>
             <th scope="col"></th>
