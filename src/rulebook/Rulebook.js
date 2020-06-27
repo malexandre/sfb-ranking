@@ -29,7 +29,9 @@ export default function Rulebook() {
       <h2>Structure des saisons</h2>
       <p>
         Les saisons ont une durée 3 mois, avec environ 2 mois dédiés à la phase de groupe, puis 1 mois dédié à la phase
-        finale.
+        finale. Les participants on en moyenne un match par semaine à faire. Si vous pensez ne pas être disponibles
+        pendant une période (si vous partez en vacances par exemple), organisez vous avec vos adversaire pour jouer les
+        matchs de ces semaines là à un autre moment, dans le temps imparti pour finir la phase actuelle.
       </p>
       <p>
         Le tirage de la phase de groupe est pondéré par le classement actuel de chaque participant. Le nombre de groupe
