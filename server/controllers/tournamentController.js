@@ -61,33 +61,37 @@ function computeLadderPoints(competitive, hasKnockout, major, rank, firstHalf, s
         return major ? 40 : 25
 
       case 3:
-        return major ? 25 : 15
+        return major ? 25 : 15 + (shared ? 5 : 0)
 
       case 4:
         return (major ? 20 : 10) + (shared ? 5 : 0)
 
       case 5:
-        return major ? 15 : 5
+        return (major ? 15 : 5) + (shared ? 4 : 0)
       case 6:
-        return major ? 10 : 4
+        return (major ? 10 : 4) + (shared ? 3 : 0)
       case 7:
-        return major ? 9 : 3
+        return (major ? 9 : 3) + (shared ? 2 : 0)
       case 8:
         return (major ? 8 : 2) + (shared ? 2 : 0)
 
       case 9:
-        return major ? 7 : 2
+        return major ? 7 : 2 + (shared ? 2 : 0)
       case 10:
-        return major ? 6 : 2
+        return major ? 6 : 2 + (shared ? 2 : 0)
       case 11:
-        return major ? 5 : 2
+        return major ? 5 : 2 + (shared ? 1 : 0)
       case 12:
         return (major ? 4 : 2) + (shared ? 1 : 0)
 
       case 13:
-        return major ? 3 : 2
+        return major ? 3 : 2 + (shared ? 1 : 0)
+      case 14:
+        return major ? 3 : 2 + (shared ? 1 : 0)
+      case 15:
+        return major ? 3 : 2 + (shared ? 1 : 0)
       case 16:
-        return (major ? 3 : 2) + (shared ? 1 : 0)
+        return major ? 3 : 2 + (shared ? 1 : 0)
 
       default:
         return major ? 3 : 2
