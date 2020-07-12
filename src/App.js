@@ -27,13 +27,13 @@ export default function App() {
         <div className="collapse navbar-collapse" id="main-navbar">
           <div className="navbar-nav">
             <NavLink className="nav-item nav-link" activeClassName="active" to="/">
-              Règles du tournoi
+              Règles de la ligue
             </NavLink>
             <NavLink className="nav-item nav-link" activeClassName="active" to="/classement">
               Classement
             </NavLink>
             <NavLink className="nav-item nav-link" activeClassName="active" to="/tournois">
-              Tournament
+              Tournois
             </NavLink>
           </div>
         </div>
