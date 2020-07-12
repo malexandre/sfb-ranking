@@ -107,7 +107,7 @@ export default class TournamentDetail extends Component {
                     <td>{ row.ladderPoints }</td>
                     <td>{ row.totalPoints }</td>
                     <td>
-                      <Link to={ `/participant/${row.name}` }>
+                      <Link to={ `/participant/${encodeURIComponent(row.name)}` }>
                         <EyeFill />
                       </Link>
                     </td>
