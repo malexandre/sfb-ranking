@@ -6,7 +6,9 @@ import TournamentList from './tournament/TournamentList'
 import TournamentDetail from './tournament/TournamentDetail'
 import LadderDetail from './ladder/LadderDetail'
 import Admin from './Admin'
+import Home from './rulebook/Home'
 import Rulebook from './rulebook/Rulebook'
+import Faq from './rulebook/Faq'
 
 export default function App() {
   return (
@@ -26,7 +28,7 @@ export default function App() {
         </button>
         <div className="collapse navbar-collapse" id="main-navbar">
           <div className="navbar-nav">
-            <NavLink className="nav-item nav-link" activeClassName="active" to="/">
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/regles">
               Règles de la ligue
             </NavLink>
             <NavLink className="nav-item nav-link" activeClassName="active" to="/classement">
@@ -34,6 +36,9 @@ export default function App() {
             </NavLink>
             <NavLink className="nav-item nav-link" activeClassName="active" to="/tournois">
               Tournois
+            </NavLink>
+            <NavLink className="nav-item nav-link" activeClassName="active" to="/faq">
+              F.A.Q.
             </NavLink>
           </div>
         </div>
@@ -46,7 +51,9 @@ export default function App() {
           <Route path="/participant/:uuid" component={ LadderDetail } />
           <Route path="/classement" component={ Ladder } />
           <Route path="/admin" component={ Admin } />
-          <Route path="/" component={ Rulebook } />
+          <Route path="/regles" component={ Rulebook } />
+          <Route path="/faq" component={ Faq } />
+          <Route path="/" component={ Home } />
         </Switch>
       </div>
     </Router>
