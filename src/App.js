@@ -9,12 +9,19 @@ import Admin from './Admin'
 import Home from './rulebook/Home'
 import Rulebook from './rulebook/Rulebook'
 import Faq from './rulebook/Faq'
+import logo from './sfb-ranking-logo.png'
 
 export default function App() {
   return (
     <Router>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link className="navbar-brand" to="/">
+          <img src={ logo }
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="Logo de la Ligue"
+          />
           Classement SFB
         </Link>
         <button className="navbar-toggler"
