@@ -30,7 +30,8 @@ export default function Home() {
         Facebook et sur le Discord.
       </p>
 
-      <iframe width="640" height="360" src="https://widget.toornament.com/tournaments/3692103847403331584/?_locale=en_US" allowFullScreen frameBorder="0"></iframe>
+      <iframe width="640" height="360" src="https://widget.toornament.com/tournaments/3982645302550142976/?_locale=fr" allowfullscreen frameborder="0"></iframe>
+      <iframe width="640" height="360" src="https://widget.toornament.com/tournaments/3692103847403331584/?_locale=fr" allowFullScreen frameBorder="0"></iframe>
 
       <h2>Liens importants</h2>
       <dl className="row">
