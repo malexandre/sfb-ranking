@@ -61,13 +61,13 @@ exports.updateAllUserPoints = async() => {
     const scoreMinors = results
       .filter((result) => tournamentMap[result.tournamentId].major === false)
       .map((result) => result.totalPoints)
-      .sort()
+      .sort((a, b) => b - a)
       .slice(0, 2)
       .reduce((a, b) => a + b, 0)
     user.points = scoreMajors + scoreMinors
   }
 
-  const ranking = users.map((user) => user.points).sort()
+  const ranking = users.map((user) => user.points).sort((a, b) => b - a)
 
   for (const user of users) {
     user.rank = ranking.indexOf(user.points) + 1
