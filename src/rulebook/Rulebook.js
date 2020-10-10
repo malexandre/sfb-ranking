@@ -6,31 +6,24 @@ export default function Rulebook() {
     <div>
       <h2>Structure des saisons</h2>
       <p>
-        Les saisons ont une durée 3 mois, avec environ 2 mois dédiés à la phase de groupe, puis 1 mois dédié à la phase
-        finale. Les participants ont en moyenne un match par semaine à faire. Si vous pensez ne pas être disponible
-        pendant une période (si vous partez en vacances par exemple), organisez vous avec vos adversaires pour jouer les
-        matchs de ces semaines là à un autre moment, dans le temps imparti pour finir la phase actuelle.
+        Les saisons commencent par une phase de Ronde Suisse, permettant de détrminer les X meilleurs joueurs qui se
+        qualifieront ensuite pour un tournoi à Double Élimination. Le X sera déterminer en fonction du nombre de
+        participants, tout comme le nombre de matchs dans la Ronde Suisse. Les joueurs auront un match à jouer par semaine.
+        Tous les matchs se jouent en une seule manche.
       </p>
       <p>
-        Le tirage de la phase de groupe est pondéré par le classement actuel de chaque participant. Le nombre de groupe
-        sera dépendant du nombre d&apos;inscrits, tout comme le format <b>toutes rondes</b> ou{ ' ' }
-        <b>format rondes suisses</b>.
-      </p>
-      <p>
-        Une victoire en phase de groupe rapporte 3 points. Les égalités sont départagées par la différence de points,
-        puis par la puissance offensive, puis par les résultats directs, puis au hasard.
-      </p>
-      <p>
-        Les matchs de la phase de poule se jouent en une seule manche, tandis que ceux de la phase finale se jouent en 2
-        manches gagnantes (ou autrement dit, le meilleur de 3 manches).
+        Les tirages de la Ronde Suisse seront annoncés chaque vendredi soir, dès que tous les résultats de la semaine
+        seront validés. Une victoire en phase de Ronde suisse rapporte 3 points. Une victoire par forfait rapporte 2
+        points. Un match nul (les deux joueurs sont déclarés forfaits en même temps) 1 point chacun. Les défaites 0
+        point. Les égalités sont départagées par la médiane Buchholz.
       </p>
       <p>
         Un groupe de 5 modérateurs a été désigné pour jouer le rôle d&apos;arbitre si le besoin émerge, comme par
         exemple pour déclarer quelqu&apos;un forfait pour un match s&apos;il pose un lapin à son adversaire sans raison.
       </p>
       <p>
-        En dehors des tirages des groupes et de la gestion des résultats, tout est géré via Discord. Un channel dédié à
-        chaque groupe sera disponible. Il est recommandé de vous organiser avec vos adversaires sur ce channel, à la vue
+        En dehors des tirages des matchs et de la gestion des résultats, tout est géré via Discord. Un channel dédié à
+        chaque match sera disponible. Il est recommandé de vous organiser avec vos adversaires sur ce channel, à la vue
         de tout le monde. C&apos;est le meilleur moyen que nous avons trouvé pour faciliter les décisions des
         modérateurs, mais aussi pour facilement voir quand est-ce que les prochains matchs seront joués.
       </p>
@@ -57,8 +50,8 @@ export default function Rulebook() {
         <dd className="col-sm-9">
           Le format utilisé a été surnommé &quot;Double Draft Compétitive&quot;. Un joueur doit créer deux équipes de 5
           parmis la totalité des champions actuellement disponible. Chaque champion ne peut apparaître que dans une
-          équipe du même joueur. Une fois que les deux joueurs auront révélés leurs deux équipes, le joueur 2 doit ban
-          une équipe du joueur 1. C&apos;est ensuite au tour du joueur 1 de ban une équipe du joueur 2. Et la suite suit
+          équipe du même joueur. Une fois que les deux joueurs auront révélés leurs deux équipes, le joueur 1 doit ban
+          une équipe du joueur 2. C&apos;est ensuite au tour du joueur 2 de ban une équipe du joueur 1. Et la suite suit
           le format de &quot;Draft Compétitive&quot; du livre de règle.
         </dd>
 
@@ -70,10 +63,6 @@ export default function Rulebook() {
           </p>
         </dd>
       </dl>
-      <p>
-        Concernant les phases finales, seul le premier match utilise le tirage au sort pour déterminer le premier
-        joueur. Pour les matchs suivants, le premier joueur est le perdant du match précédent.
-      </p>
 
       <h2>Fonctionnement du classement SFB</h2>
       <p>
