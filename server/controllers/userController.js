@@ -67,7 +67,7 @@ exports.updateAllUserPoints = async() => {
     user.points = scoreMajors + scoreMinors
   }
 
-  const ranking = users.map((user) => user.points)
+  const ranking = users.map((user) => user.points).sort()
 
   for (const user of users) {
     user.rank = ranking.indexOf(user.points) + 1
