@@ -52,50 +52,48 @@ function computeLadderPoints(competitive, hasKnockout, major, rank, firstHalf, s
     return 0
   }
 
-  if (hasKnockout) {
-    switch (rank) {
-      case 1:
-        return major ? 50 : 35
+  switch (rank) {
+    case 1:
+      return major ? 50 : 35
 
-      case 2:
-        return major ? 40 : 25
+    case 2:
+      return major ? 40 : 25
 
-      case 3:
-        return major ? 25 : 15 + (shared ? 5 : 0)
+    case 3:
+      return major ? 25 : 15 + (shared ? 5 : 0)
 
-      case 4:
-        return (major ? 20 : 10) + (shared ? 5 : 0)
+    case 4:
+      return (major ? 20 : 10) + (shared ? 5 : 0)
 
-      case 5:
-        return (major ? 15 : 5) + (shared ? 4 : 0)
-      case 6:
-        return (major ? 10 : 4) + (shared ? 3 : 0)
-      case 7:
-        return (major ? 9 : 3) + (shared ? 2 : 0)
-      case 8:
-        return (major ? 8 : 2) + (shared ? 2 : 0)
+    case 5:
+      return (major ? 15 : 5) + (shared ? 4 : 0)
+    case 6:
+      return (major ? 10 : 4) + (shared ? 3 : 0)
+    case 7:
+      return (major ? 9 : 3) + (shared ? 2 : 0)
+    case 8:
+      return (major ? 8 : 2) + (shared ? 2 : 0)
 
-      case 9:
-        return major ? 7 : 2 + (shared ? 2 : 0)
-      case 10:
-        return major ? 6 : 2 + (shared ? 2 : 0)
-      case 11:
-        return major ? 5 : 2 + (shared ? 1 : 0)
-      case 12:
-        return (major ? 4 : 2) + (shared ? 1 : 0)
+    case 9:
+      return major ? 7 : 2 + (shared ? 2 : 0)
+    case 10:
+      return major ? 6 : 2 + (shared ? 2 : 0)
+    case 11:
+      return major ? 5 : 2 + (shared ? 1 : 0)
+    case 12:
+      return (major ? 4 : 2) + (shared ? 1 : 0)
 
-      case 13:
-        return major ? 3 : 2 + (shared ? 1 : 0)
-      case 14:
-        return major ? 3 : 2 + (shared ? 1 : 0)
-      case 15:
-        return major ? 3 : 2 + (shared ? 1 : 0)
-      case 16:
-        return major ? 3 : 2 + (shared ? 1 : 0)
+    case 13:
+      return major ? 3 : 2 + (shared ? 1 : 0)
+    case 14:
+      return major ? 3 : 2 + (shared ? 1 : 0)
+    case 15:
+      return major ? 3 : 2 + (shared ? 1 : 0)
+    case 16:
+      return major ? 3 : 2 + (shared ? 1 : 0)
 
-      default:
-        return major ? 3 : 2
-    }
+    default:
+      return major ? 3 : 2
   }
 }
 
@@ -127,6 +125,8 @@ exports.importTournament = async(name, major, competitive, date, hasKnockout, da
     const user = await userController.upsertUserByName(name)
     const ladderPoints = computeLadderPoints(competitive, hasKnockout, major, row.rank, row.firstHalf, shared)
     const totalPoints = major ? ladderPoints + 15 : ladderPoints + Math.min(10, row.encounters)
+
+    console.log(`ladderPoints(${ladderPoints}) totalPoints(${totalPoints})`)
 
     await Result.create({
       ...row,
